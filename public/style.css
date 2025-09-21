@@ -1,0 +1,724 @@
+   /* showuser page css */
+
+ /* style.css - SafeSign User Management System */
+
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== SHOW USERS PAGE ===== */
+.show_body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+/* Logo styling */
+.show_body img {
+    display: block;
+    margin: 0 auto 30px;
+    max-width: 180px;
+    height: auto;
+}
+
+/* Add User Button */
+.show_formAddUser {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.show_btn_add {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3);
+}
+
+.show_btn_add:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
+}
+
+/* Table Styles */
+.show_tab {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    background: white;
+}
+
+/* Table Header */
+.show_tr1 {
+    background: linear-gradient(to right, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.show_tr1 th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* Table Rows */
+.show_tr2 {
+    border-bottom: 1px solid #eef1f5;
+    transition: all 0.3s ease;
+}
+
+.show_tr2:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.01);
+}
+
+.show_td1, .show_td2, .show_td3, .show_td4, .show_td5 {
+    padding: 16px 15px;
+    color: #495057;
+}
+
+.show_td1 {
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Action Buttons */
+.show_btn_edit, .show_Btn_del {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.show_btn_edit {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+}
+
+.show_btn_edit:hover {
+    background: linear-gradient(to right, #3a8dcf 0%, #00c9db 100%);
+}
+
+.show_Btn_del {
+    background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+    color: white;
+}
+
+.show_Btn_del:hover {
+    background: linear-gradient(to right, #e0677d 0%, #e070a0 100%);
+}
+
+/* Form elements in table */
+.show_td5 form {
+    margin: 0;
+}
+
+/* ===== NEW USER FORM ===== */
+.new_body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Form container */
+.new_form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Input fields */
+.new_form input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.new_form input:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
+    background: #fff;
+}
+
+.new_form input::placeholder {
+    color: #90a4ae;
+}
+
+/* Specific input styling */
+.new_inp1 {
+    border-left: 4px solid #4dd0e1;
+}
+
+.new_inp2 {
+    border-left: 4px solid #81c784;
+}
+
+.new_inp3 {
+    border-left: 4px solid #64b5f6;
+}
+
+.new_inp4 {
+    border-left: 4px solid #ffb74d;
+}
+
+/* Submit button */
+.new_btn {
+    background: linear-gradient(to right, #00bcd4, #00838f);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 131, 143, 0.2);
+}
+
+.new_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 131, 143, 0.3);
+}
+
+.new_btn:active {
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    /* Show users page */
+    .show_tab {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .show_tr1 th, 
+    .show_td1, 
+    .show_td2, 
+    .show_td3, 
+    .show_td4, 
+    .show_td5 {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+    
+    .show_btn_edit, .show_Btn_del {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    /* New user form */
+    .new_form {
+        padding: 30px 20px;
+    }
+    
+    .new_form input {
+        padding: 12px 15px;
+    }
+    
+    .new_btn {
+        padding: 14px;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInRow {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.show_tr2 {
+    animation: fadeInRow 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.new_form {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Staggered animation for table rows */
+.show_tr2:nth-child(2) { animation-delay: 0.05s; }
+.show_tr2:nth-child(3) { animation-delay: 0.1s; }
+.show_tr2:nth-child(4) { animation-delay: 0.15s; }
+.show_tr2:nth-child(5) { animation-delay: 0.2s; }
+.show_tr2:nth-child(6) { animation-delay: 0.25s; }
+
+/* delete page css */
+
+/* General Body Styling */
+.delBody {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff4e50, #1f1c2c);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Heading */
+.delh2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: fadeInDown 1s ease;
+}
+
+/* Form Styling */
+.delform {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Input Fields */
+.delform input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.delInp1, .delInp2 {
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+}
+
+.delform input:focus {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.8);
+  transform: scale(1.03);
+}
+
+/* Delete Button */
+.delBtn1 {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff0844, #ff2c2c);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+}
+
+.delBtn1:hover {
+  background: linear-gradient(135deg, #e60026, #b3001e);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* home page css */
+
+/* Home Page Body */
+.homeBody {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+/* Heading */
+.home_h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  padding: 15px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease;
+}
+
+/* Button */
+.home_btn {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1.2s ease;
+}
+
+.home_btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #dd2476, #ff512f);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* edit user page css */
+
+/* Body Styling */
+.edit_body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* soft blue gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #333;
+}
+
+/* Heading */
+.edit_h2 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #2c3e50;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: fadeInDown 1s ease;
+}
+
+/* Form */
+.edit_form {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 25px 35px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  animation: fadeInUp 1.2s ease;
+}
+
+/* Textarea */
+.edit_textarea {
+  resize: none;
+  min-height: 80px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #f0f9ff;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.edit_textarea:focus {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(161, 196, 253, 0.8);
+}
+
+/* Input */
+.edit_input {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #f0f9ff;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+}
+
+.edit_input:focus {
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(161, 196, 253, 0.8);
+}
+
+/* Button */
+.edit_btn {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff); /* calm aqua gradient */
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 166, 255, 0.4);
+}
+
+.edit_btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #66a6ff, #89f7fe);
+  box-shadow: 0 6px 18px rgba(102, 166, 255, 0.6);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  /* Add new user page css */
+
+/* style.css */
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.new_body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 50%, #80deea 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Form container */
+.new_form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Input fields */
+.new_form input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.new_form input:focus {
+    outline: none;
+    border-color: #00bcd4;
+    box-shadow: 0 0 0 2px rgba(0, 188, 212, 0.2);
+    background: #fff;
+}
+
+.new_form input::placeholder {
+    color: #90a4ae;
+}
+
+/* Specific input styling */
+.new_inp1 {
+    border-left: 4px solid #4dd0e1;
+}
+
+.new_inp2 {
+    border-left: 4px solid #81c784;
+}
+
+.new_inp3 {
+    border-left: 4px solid #64b5f6;
+}
+
+.new_inp4 {
+    border-left: 4px solid #ffb74d;
+}
+
+/* Submit button */
+.new_btn {
+    background: linear-gradient(to right, #00bcd4, #00838f);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 131, 143, 0.2);
+}
+
+.new_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 131, 143, 0.3);
+}
+
+.new_btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+    .new_form {
+        padding: 30px 20px;
+    }
+    
+    .new_form input {
+        padding: 12px 15px;
+    }
+    
+    .new_btn {
+        padding: 14px;
+    }
+}
+
+/* Animation for form appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.new_form {
+    animation: fadeIn 0.5s ease-out;
+}
+
+

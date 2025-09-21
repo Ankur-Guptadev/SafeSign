@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        table, th, td {
+            border: 1px black solid;
+        }
+    </style>
+</head>
+<body  class="show_body">
+
+    <img src="/logo of this web.png" alt="logo pic">
+    
+    <form class="show_formAddUser" method="GET" action="/user/add">
+        <button class="show_btn_add">Add New User+</button>
+    </form>
+    
+    <table class="show_tab">
+        <tr class="show_tr1">
+            <th class="show_">Id</th>
+            <th>Email</th>
+            <th>Username</th>
+        </tr>
+        <% for(user of users) { %>
+            <tr class="show_tr2">
+                <td class="show_td1"><%=user.id%></td>
+                <td class="show_td2"><%= user.email%></td>
+                <td class="show_td3"><%= user.username%> </td>
+                <td class="show_td4">
+                    <form class="show_td5" method="GET" action="/user/<%= user.id%>/edit">
+                        <button class="show_btn_edit">Edit username</button>
+                    </form>
+                </td>
+                
+                <td class="show_td5">
+                    <form class="show_formDel" method="GET" action="/user/<%= user.id%>/remove">
+                        <button class="show_Btn_del">Delete user</button>
+                    </form>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

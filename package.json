@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "method-override": "^3.0.0",
+    "mysql2": "^3.15.0",
+    "uuid": "^13.0.0"
+  },
+  "name": "safesign",
+  "version": "1.0.0",
+  "description": "SafeSign - is a Platform where the Account are created with password Authentication , and saved in MySQL database and maintained , and If you wand to delete the Account needed password verification and can be edited",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ankur-Guptadev/SafeSign.git"
+  },
+  "author": "Ankur Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ankur-Guptadev/SafeSign/issues"
+  },
+  "homepage": "https://github.com/Ankur-Guptadev/SafeSign#readme"
+}
